@@ -1,4 +1,4 @@
-package com.secor.orderservice;
+package com.secor.apicompservice;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,11 +17,20 @@ public class AppConfig {
                 .build();
     }
 
-    @Bean(name = "payment-service-create-payment")
+    @Bean(name = "order-service-get-order")
+    public WebClient webClientOrderService(WebClient.Builder webClientBuilder)
+    {
+        return webClientBuilder
+                .baseUrl("http://localhost:8101/api/v1/get/order")
+                .filter(new LoggingWebClientFilter())
+                .build();
+    }
+
+    @Bean(name = "payment-service-get-payment")
     public WebClient webClientPymntService(WebClient.Builder webClientBuilder)
     {
         return webClientBuilder
-                .baseUrl("http://localhost:8102/api/v1/create/payment")
+                .baseUrl("http://localhost:8102/api/v1/get/payment")
                 .filter(new LoggingWebClientFilter())
                 .build();
     }

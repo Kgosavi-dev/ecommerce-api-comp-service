@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.secor</groupId>
-    <artifactId>order-service</artifactId>
+    <artifactId>api-comp-service</artifactId>
     <version>prod-1</version>
-    <name>order-service</name>
-    <description>restro-service</description>
+    <name>api-comp-service</name>
+    <description>api-comp-service</description>
     <url/>
     <licenses>
         <license/>
@@ -98,10 +98,6 @@
         <dependency>
             <groupId>org.springframework.retry</groupId>
             <artifactId>spring-retry</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

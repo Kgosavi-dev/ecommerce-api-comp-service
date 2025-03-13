@@ -1,4 +1,4 @@
-package com.secor.orderservice;
+package com.secor.apicompservice;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

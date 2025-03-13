@@ -1,4 +1,4 @@
-package com.secor.orderservice;
+package com.secor.apicompservice;
 
 
 import lombok.Getter;
@@ -10,4 +10,6 @@ public class OrderDatum {
     private String orderid;
     private String type;
     private String description;
+    private String status;
+    private String paymentid;
 }

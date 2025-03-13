@@ -1,4 +1,4 @@
-package com.secor.orderservice;
+package com.secor.apicompservice;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -30,17 +30,17 @@ public class Producer
         //authDatum.setType("AUTH");
         //authDatum.setDescription(description);
 
-        OrderDatum orderDatum = new OrderDatum();
-        orderDatum.setOrderid(orderid);
-        orderDatum.setType(type);
-        orderDatum.setDescription(description);
+//        OrderDatum orderDatum = new OrderDatum();
+//        orderDatum.setOrderid(orderid);
+//        orderDatum.setType(type);
+//        orderDatum.setDescription(description);
 //
         // convert to JSON
         ObjectMapper objectMapper = new ObjectMapper();
-        String datum =  objectMapper.writeValueAsString(orderDatum);
+        //String datum =  objectMapper.writeValueAsString(orderDatum);
 //
-        logger.info(String.format("#### -> Producing message -> %s", datum));
-        this.kafkaTemplate.send(TOPIC, datum);
+        //logger.info(String.format("#### -> Producing message -> %s", datum));
+        //this.kafkaTemplate.send(TOPIC, datum);
     }
 
 }
