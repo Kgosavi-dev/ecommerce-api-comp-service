@@ -1,4 +1,4 @@
-package com.secor.apicompservice;
+package com.secor.ecommerceapicompservice;
 
 
 import lombok.Getter;

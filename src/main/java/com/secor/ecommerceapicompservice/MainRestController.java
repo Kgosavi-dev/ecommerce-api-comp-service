@@ -1,4 +1,4 @@
-package com.secor.apicompservice;
+package com.secor.ecommerceapicompservice;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -16,8 +16,6 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.Random;
 
 @RestController
 @RequestMapping("api/v1")

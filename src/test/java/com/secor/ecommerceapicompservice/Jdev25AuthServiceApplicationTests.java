@@ -1,4 +1,4 @@
-package com.secor.apicompservice;
+package com.secor.ecommerceapicompservice;
 
 import org.springframework.boot.test.context.SpringBootTest;
 

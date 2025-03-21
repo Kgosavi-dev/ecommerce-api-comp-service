@@ -1,14 +1,14 @@
-package com.secor.apicompservice;
+package com.secor.ecommerceapicompservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApiCompServiceApplication {
+public class EcommerceApiCompServiceApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(ApiCompServiceApplication.class, args);
+        SpringApplication.run(EcommerceApiCompServiceApplication.class, args);
 
     }
 

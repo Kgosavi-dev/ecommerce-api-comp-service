@@ -1,4 +1,4 @@
-package com.secor.apicompservice;
+package com.secor.ecommerceapicompservice;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
