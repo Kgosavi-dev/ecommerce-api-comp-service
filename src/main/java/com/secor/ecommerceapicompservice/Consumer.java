@@ -17,7 +17,7 @@ public class Consumer
     RedisTemplate<String, String> redisTemplate;
     private final Logger logger = LoggerFactory.getLogger(Consumer.class);
 
-    @KafkaListener(topics = "order-events", groupId = "order-events-consumer-api-comp-service")
+    @KafkaListener(topics = "ecommerce-order-events", groupId = "ecommerce-order-events-consumer-api-comp-service")
     public void consumeAuthEvents(String message) throws IOException
     {
         logger.info("DOMAIN EVENT RECEIVED "+message);

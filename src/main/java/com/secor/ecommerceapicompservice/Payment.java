@@ -14,7 +14,7 @@ public class Payment {
     private String orderid;
 
 
-    private Integer amount;
+    private double amount;
 
 
     private String status;

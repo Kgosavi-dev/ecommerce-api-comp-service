@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class Producer
 {
     private static final Logger logger = LoggerFactory.getLogger(Producer.class);
-    private static final String TOPIC = "order-events";
+    private static final String TOPIC = "ecommerce-order-events";
 
     @Autowired //DEPENDENCY INJECTION PROMISE FULFILLED AT RUNTIME
     private KafkaTemplate<String, String> kafkaTemplate ;
@@ -30,17 +30,17 @@ public class Producer
         //authDatum.setType("AUTH");
         //authDatum.setDescription(description);
 
-//        OrderDatum orderDatum = new OrderDatum();
-//        orderDatum.setOrderid(orderid);
-//        orderDatum.setType(type);
-//        orderDatum.setDescription(description);
-//
+        OrderDatum orderDatum = new OrderDatum();
+        orderDatum.setOrderid(orderid);
+        orderDatum.setType(type);
+        orderDatum.setDescription(description);
+
         // convert to JSON
         ObjectMapper objectMapper = new ObjectMapper();
-        //String datum =  objectMapper.writeValueAsString(orderDatum);
-//
-        //logger.info(String.format("#### -> Producing message -> %s", datum));
-        //this.kafkaTemplate.send(TOPIC, datum);
+        String datum =  objectMapper.writeValueAsString(orderDatum);
+
+        logger.info(String.format("#### -> Producing message -> %s", datum));
+        this.kafkaTemplate.send(TOPIC, datum);
     }
 
 }
